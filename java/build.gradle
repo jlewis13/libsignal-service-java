@@ -19,6 +19,7 @@ dependencies {
     compile 'com.google.protobuf:protobuf-java:2.5.0'
     compile 'com.googlecode.libphonenumber:libphonenumber:7.1.0'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.5.0'
+    compile 'org.apache.httpcomponents:httpclient:4.4'
 
     compile 'com.github.ForstaLabs:libsignal-protocol-java:forsta-v2.2.0.2'
     compile 'com.squareup.okhttp:okhttp:2.2.0'
