@@ -45,9 +45,9 @@ import static org.whispersystems.signalservice.internal.push.ProvisioningProtos.
  */
 public class SignalServiceAccountManager {
 
-  private final PushServiceSocket pushServiceSocket;
-  private final String            user;
-  private final String            userAgent;
+  protected final PushServiceSocket pushServiceSocket;
+  protected final String            user;
+  protected final String            userAgent;
 
   /**
    * Construct a SignalServiceAccountManager.
