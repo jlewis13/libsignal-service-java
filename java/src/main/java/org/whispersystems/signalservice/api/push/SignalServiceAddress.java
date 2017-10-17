@@ -13,7 +13,7 @@ import org.whispersystems.libsignal.util.guava.Optional;
  */
 public class SignalServiceAddress {
 
-  public static final int DEFAULT_DEVICE_ID = 1;
+  public static final int DEFAULT_DEVICE_ID = 1; // DEPRECATED! Do not use!
 
   private final String e164number;
   private final Optional<String> relay;

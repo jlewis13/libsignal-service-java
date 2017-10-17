@@ -398,10 +398,6 @@ public class SignalServiceMessageSender {
   {
     List<OutgoingPushMessage> messages = new LinkedList<>();
 
-    if (!recipient.equals(localAddress)) {
-      messages.add(getEncryptedMessage(socket, recipient, SignalServiceAddress.DEFAULT_DEVICE_ID, plaintext, legacy));
-    }
-
     for (int deviceId : store.getSubDeviceSessions(recipient.getNumber())) {
       messages.add(getEncryptedMessage(socket, recipient, deviceId, plaintext, legacy));
     }
