@@ -401,7 +401,7 @@ public class SignalServiceMessageSender {
   {
     List<OutgoingPushMessage> messages = new LinkedList<>();
 
-    for (int deviceId : store.getSubDeviceSessions(recipient.getNumber())) {
+    for (int deviceId : store.getDeviceSessions(recipient.getNumber())) {
       messages.add(getEncryptedMessage(socket, recipient, deviceId, plaintext, legacy));
     }
 
