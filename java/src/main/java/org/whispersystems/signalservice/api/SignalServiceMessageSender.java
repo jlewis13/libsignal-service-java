@@ -87,7 +87,7 @@ public class SignalServiceMessageSender {
     StaticCredentialsProvider creds = new StaticCredentialsProvider(username, password, null);
     this.socket        = new PushServiceSocket(url, trustStore, creds, userAgent);
     this.store         = store;
-    this.localAddress  = new SignalServiceAddress(user);
+    this.localAddress  = new SignalServiceAddress(number);
     this.eventListener = eventListener;
   }
 
