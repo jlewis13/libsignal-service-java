@@ -47,7 +47,7 @@ public class SignalServiceAccountManager {
 
   protected PushServiceSocket pushServiceSocket;
   protected String            user;
-  protected int               deviceId;
+  protected Integer           deviceId;
   protected String            userAgent;
 
   /**
