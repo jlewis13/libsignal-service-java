@@ -26,6 +26,7 @@ At install time, clients need to register with the Signal server.
 private final String     URL         = "https://my.signal.server.com";
 private final TrustStore TRUST_STORE = new MyTrustStoreImpl();
 private final String     USERNAME    = "+14151231234";
+private final int        DEVICE_ID   = 1;
 private final String     PASSWORD    = generateRandomPassword();
 
 SignalServiceAccountManager accountManager = new SignalServiceAccountManager(URL, TRUST_STORE,
@@ -77,7 +78,8 @@ messageSender.sendMessage(new SignalProtocolAddress("+14159998888"),
 ## Receiving messages
 
 `````
-SignalServiceMessageReceiver messageReceiver = new SignalServiceMessageReceiver(URL, TRUST_STORE, USERNAME, PASSWORD, mySignalingKey);
+SignalServiceMessageReceiver messageReceiver = new SignalServiceMessageReceiver(
+    URL, TRUST_STORE, NUMBER, DEVICE_ID, PASSWORD, mySignalingKey);
 SignalServiceMessagePipe     messagePipe;
 
 try {

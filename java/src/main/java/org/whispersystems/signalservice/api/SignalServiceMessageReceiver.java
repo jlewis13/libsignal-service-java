@@ -44,15 +44,17 @@ public class SignalServiceMessageReceiver {
    * @param url The URL of the Signal Service.
    * @param trustStore The {@link org.whispersystems.signalservice.api.push.TrustStore} containing
    *                   the server's TLS signing certificate.
-   * @param user The Signal Service username (eg. phone number).
+   * @param number The Signal Service number.
+   * @param deviceId The Signal Service device id.
    * @param password The Signal Service user password.
    * @param signalingKey The 52 byte signaling key assigned to this user at registration.
    */
   public SignalServiceMessageReceiver(String url, TrustStore trustStore,
-                                      String user, String password,
+                                      String number, int, deviceId, String password,
                                       String signalingKey, String userAgent)
   {
-    this(url, trustStore, new StaticCredentialsProvider(user, password, signalingKey), userAgent);
+    String username = number + "." + deviceId;
+    this(url, trustStore, new StaticCredentialsProvider(username, password, signalingKey), userAgent);
   }
 
   /**
