@@ -78,7 +78,7 @@ public class SignalServiceMessageSender {
    *                      setup or torn down for a recipient.
    */
   public SignalServiceMessageSender(String url, TrustStore trustStore,
-                                    String number, int deviceId, String password,
+                                    String number, Integer deviceId, String password,
                                     SignalProtocolStore store,
                                     String userAgent,
                                     Optional<EventListener> eventListener)

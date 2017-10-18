@@ -61,7 +61,7 @@ public class SignalServiceAccountManager {
    * @param userAgent A string which identifies the client software.
    */
   public SignalServiceAccountManager(String url, TrustStore trustStore,
-                                     String user, int deviceId, String password,
+                                     String user, Integer deviceId, String password,
                                      String userAgent)
   {
     String username        = user + "." + deviceId;

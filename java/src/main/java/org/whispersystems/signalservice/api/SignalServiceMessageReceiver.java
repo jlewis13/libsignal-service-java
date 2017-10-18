@@ -50,7 +50,7 @@ public class SignalServiceMessageReceiver {
    * @param signalingKey The 52 byte signaling key assigned to this user at registration.
    */
   public SignalServiceMessageReceiver(String url, TrustStore trustStore,
-                                      String number, int deviceId, String password,
+                                      String number, Integer deviceId, String password,
                                       String signalingKey, String userAgent)
   {
     this(url, trustStore, new StaticCredentialsProvider(number + "." + deviceId, password, signalingKey), userAgent);
