@@ -10,4 +10,10 @@ public class AutoProvisionProvider extends JavaCurve25519Provider {
   public AutoProvisionProvider() {
     super();
   }
+
+  @Override
+  public byte[] generatePublicKey(byte[] privateKey) {
+    // XXX This is the only reason for this class. Use in Autoprovisioning.
+    return super.generatePublicKey(privateKey);
+  }
 }
